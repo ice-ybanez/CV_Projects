@@ -1,0 +1,3 @@
+Cheese,2.5,10
+Pizza,2.5,20
+Sausages,5.99,50

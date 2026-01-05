@@ -1,0 +1,19 @@
+[
+{ "target" : 1,
+    "Education":[{
+        "enrolled_university": "no_enrollment",
+        "major_discipline": "STEM",
+        "education_level": "Graduate"
+
+    }],
+    "Company":[{
+        "company_id": "C01",
+        "company_type": "Early Stage Startup",
+        "company_size": "<10",
+        "training_hours": "28"
+    }],
+    "Experience" :[{ 
+        "relevent_experience": "Has relevent experience"
+    }]
+}
+]

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "330549652890",
+    "project_id": "creative-commissions-tracker",
+    "storage_bucket": "creative-commissions-tracker.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:330549652890:android:cd5f86aec52d527f6f5e23",
+        "android_client_info": {
+          "package_name": "com.example.creativecommissionstracker"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDl2TAsdQqeJYycDszrMh-8RVYXLdBvm_M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

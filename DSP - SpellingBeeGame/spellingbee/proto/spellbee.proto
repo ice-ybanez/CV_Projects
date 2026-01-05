@@ -1,0 +1,53 @@
+syntax = "proto3";
+
+// the game manager
+
+package spellbee.v1;
+option go_package = "spellingbee/proto;pb";
+
+service SpellBee {
+  rpc NewGame (NewGameRequest) returns (NewGameResponse);
+  rpc SubmitWord (SubmitWordRequest) returns (SubmitWordResponse);
+  rpc GetStatus (GetStatusRequest) returns (GetStatusResponse);
+}
+
+message Puzzle {
+  string letters = 1; // 7 unique upper-case letters e.g. "DLUGEIT"
+  string center  = 2; // single upper-case letter e,.g. "U"
+}
+
+
+message NewGameRequest {
+  string player = 1;
+}
+
+message NewGameResponse {
+  string game_id = 1;   // identifier for server for game session
+  Puzzle puzzle  = 2;   // letters/center for display
+  int32 total    = 3;   // total so far (starts at 0)
+}
+
+
+message SubmitWordRequest {
+  string game_id = 1;
+  string word    = 2;
+}
+
+message SubmitWordResponse {
+  bool   valid   = 1;   // word valid?
+  string message = 2;   // response like "Valid word scoring x points"
+  int32  points  = 3;   // points for word submitted
+  int32  total   = 4;   // update total so far
+  bool   pangram = 5;   // if the submitted word is a pangram
+  string reason  = 6;   // reason why a word would be invalid
+}
+
+message GetStatusRequest {
+  string game_id = 1;
+}
+
+message GetStatusResponse {
+  Puzzle puzzle = 1;
+  int32  total  = 2;
+  repeated string found = 3;    // words found already
+}

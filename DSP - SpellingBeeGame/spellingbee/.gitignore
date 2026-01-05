@@ -1,0 +1,10 @@
+/bin/
+/dist/
+/build/
+/out/
+/vendor/
+*.exe
+*.log
+*.tmp
+*.zip
+**/*.pb.go
